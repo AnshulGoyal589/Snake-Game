@@ -15,7 +15,10 @@
     <div id="restart">
         <button id="restart-button">RESTART!</button>
     </div>
-
+    <div style="display:none;">
+        <img src="https://i.pinimg.com/originals/af/bd/b3/afbdb38707e942ab171a1a8f24c25231.jpg" id="foodImage">
+        <img src="https://th.bing.com/th/id/R.84e662ff7cdaecf3dfe2207ffc675112?rik=F4Ll0A5h%2bdSDqg&riu=http%3a%2f%2fbeycan.net%2fgames%2fsnake-game%2fimages%2fsnake-game-logo-300x300.png&ehk=PE%2b50%2bMuS6l6hQqL5RkMljK1PahF4N6WUm2JsvcmI4Y%3d&risl=&pid=ImgRaw&r=0" id="headImage" >
+      </div>
 
     <script>
 
@@ -38,12 +41,20 @@
         divElement.style.zIndex= '9999'; 
 
 
-
+        buttonElement.addEventListener('mouseenter', function() {
+            buttonElement.style.boxShadow = '2px 2px 5px 10px rgba(174, 119, 124, 0.5)';
+            buttonElement.style.color='#F7C5CC';
+        });
+        buttonElement.addEventListener('mouseleave', function() {
+            buttonElement.style.boxShadow = 'none';
+            buttonElement.style.color='white';
+        });
         buttonElement.style.fontSize='74px';
-        buttonElement.style.backgroundColor='black';
-        // buttonElement.style.width='900px';
+        buttonElement.style.backgroundColor='red';
+        buttonElement.style.border='4px solid black';
         buttonElement.style.color='white';
         buttonElement.style.padding='40px';
+        buttonElement.style.borderRadius='10px';
     }
 
     </script>
