@@ -2,6 +2,8 @@ const canvas=document.getElementById("canvas");
 const ctx=canvas.getContext("2d");
 let snakeFood=null;
 let count=0;
+let button=document.getElementById("restart-button");
+
 class snake{
 
     constructor(){
@@ -72,6 +74,7 @@ class snake{
             // console.log(this.cells[i].x, "    ", headX);
             // console.log(headX===this.cells[i].x && headY===this.cells[i].y);
             if(headX===this.cells[i].x && headY===this.cells[i].y){
+                // myFunction();
                 gameOver();
             }
         
@@ -154,4 +157,21 @@ snake_init();
 const id=setInterval(Snake.gameLoop,90);
 function gameOver(){
     clearInterval(id);
+    myFunction();
 }
+
+
+window.addEventListener("load", function(){
+    var loadingMessage = document.getElementById('loadingMessage');
+    loadingMessage.style.display = 'none'; 
+
+});
+
+button.addEventListener("click",()=>{
+    // const Snake=new snake();
+    // snake_init();
+    // const id=setInterval(Snake.gameLoop,90);
+    setTimeout(function() {
+        location.reload();
+      }, 100);
+});
