@@ -5,12 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <canvas id="canvas" height="600px" width="1200px" style="background-color:black;border:20px solid green;margin-top:50px;margin-left:100px"></canvas>
- 
     
+    
+    <div id="restart">
+        <button id="restart-button">RESTART!</button>
+    </div>
+
+
+    <script>
+
+    function myFunction() {
+        var divElement=document.getElementById("restart");
+        var buttonElement=document.getElementById("restart-button");
+        divElement.style.backgroundColor = 'blue';
+        divElement.style.border = '2px solid black';
+        
+        divElement.style.fontSize = '94px';
+        divElement.style.position=' fixed';
+        divElement.style.top= '0';
+        divElement.style.left= '0';
+        divElement.style.width= '100%';
+        divElement.style.height= '100%';
+        divElement.style.backgroundColor= 'rgba(174, 119, 124, 0.5)'; 
+        divElement.style.display= 'flex';
+        divElement.style.alignItems= 'center';
+        divElement.style.justifyContent= 'center'; 
+        divElement.style.zIndex= '9999'; 
+
+
+
+        buttonElement.style.fontSize='74px';
+        buttonElement.style.backgroundColor='black';
+        // buttonElement.style.width='900px';
+        buttonElement.style.color='white';
+        buttonElement.style.padding='40px';
+    }
+
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
