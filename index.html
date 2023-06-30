@@ -27,14 +27,12 @@
         var buttonElement=document.getElementById("restart-button");
         divElement.style.backgroundColor = 'blue';
         divElement.style.border = '2px solid black';
-        
-        divElement.style.fontSize = '94px';
         divElement.style.position=' fixed';
         divElement.style.top= '0';
         divElement.style.left= '0';
         divElement.style.width= '100%';
         divElement.style.height= '100%';
-        divElement.style.backgroundColor= 'rgba(174, 119, 124, 0.5)'; 
+        divElement.style.backgroundColor= 'rgba(0,0,0, 0.5)'; 
         divElement.style.display= 'flex';
         divElement.style.alignItems= 'center';
         divElement.style.justifyContent= 'center'; 
@@ -42,14 +40,12 @@
 
 
         buttonElement.addEventListener('mouseenter', function() {
-            buttonElement.style.boxShadow = '2px 2px 5px 10px rgba(174, 119, 124, 0.5)';
-            buttonElement.style.color='#F7C5CC';
+            buttonElement.style.boxShadow = '2px 2px 5px 10px rgba(174, 119, 124, 0.7)';
         });
         buttonElement.addEventListener('mouseleave', function() {
             buttonElement.style.boxShadow = 'none';
-            buttonElement.style.color='white';
         });
-        buttonElement.style.fontSize='74px';
+        buttonElement.style.fontSize='60px';
         buttonElement.style.backgroundColor='red';
         buttonElement.style.border='4px solid black';
         buttonElement.style.color='white';
