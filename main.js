@@ -162,7 +162,7 @@ function randomFood(){
 }
 const Snake=new snake();
 snake_init();
-const id=setInterval(Snake.gameLoop,150);
+const id=setInterval(Snake.gameLoop,300);
 function gameOver(){
     clearInterval(id);
     myFunction();
