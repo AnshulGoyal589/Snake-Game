@@ -3,6 +3,8 @@ const ctx=canvas.getContext("2d");
 let snakeFood=null;
 let count=0;
 let button=document.getElementById("restart-button");
+let image=document.getElementById("foodImage");
+let snakeHeadImage=document.getElementById("headImage");
 
 class snake{
 
@@ -31,7 +33,8 @@ class snake{
 
         this.cells.shift();
         ctx.fillStyle='brown';
-        ctx.fillRect(snakeFood.x,snakeFood.y,60,60);
+        ctx.drawImage(image,snakeFood.x,snakeFood.y,60,60);
+        // ctx.fillRect(snakeFood.x,snakeFood.y,60,60);
         for(let i=0 ; i<this.cells.length ; i++){
             // if(i===j){
             this.cells[i].x%=20;
@@ -47,12 +50,17 @@ class snake{
             const cell=this.cells[i];
             if(i===this.cells.length -1){
                 ctx.fillStyle='red';
+
+                
+            ctx.drawImage(snakeHeadImage,cell.x*60,cell.y*60,58,58);
+
             }
             else{
-                ctx.fillStyle='yellow';
-            }
+                ctx.fillStyle='green';
+                
             
             ctx.fillRect(cell.x*60,cell.y*60,58,58);
+            }
 
             
         }
@@ -154,7 +162,7 @@ function randomFood(){
 }
 const Snake=new snake();
 snake_init();
-const id=setInterval(Snake.gameLoop,90);
+const id=setInterval(Snake.gameLoop,150);
 function gameOver(){
     clearInterval(id);
     myFunction();
